@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:projects_udemy1/providers/products.dart';
 import 'package:provider/provider.dart';
 import '/providers/products.dart';
-import '/widgets/product_detail_screen.dart';
+import 'screens/product_detail_screen.dart';
 import '/screens/products_overview_screen.dart';
 
 void main() {
