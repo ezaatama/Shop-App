@@ -35,12 +35,7 @@ class Products with ChangeNotifier {
             "https://i.pinimg.com/564x/8d/d6/14/8dd614fd5db11f0f50bfb1ee62d248a0.jpg"),
   ];
 
-  // var _showOnlyFavorites = false;
-
   List<Product> get items {
-    // if (_showOnlyFavorites) {
-    //   return _items.where((element) => element.isFavorite).toList();
-    // }
     return [..._items];
   }
 
@@ -51,16 +46,6 @@ class Products with ChangeNotifier {
   Product findById(String id) {
     return _items.firstWhere((prod) => prod.id == id);
   }
-
-  // void showFavoritesOnly() {
-  //   _showOnlyFavorites = true;
-  //   notifyListeners();
-  // }
-
-  // void showAll() {
-  //   _showOnlyFavorites = false;
-  //   notifyListeners();
-  // }
 
   void addProduct() {
     // _items.add(value);
