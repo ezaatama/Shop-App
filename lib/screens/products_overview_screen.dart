@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projects_udemy1/providers/cart.dart';
-import 'package:projects_udemy1/providers/products.dart';
+import 'package:projects_udemy1/screens/cart_screen.dart';
+import 'package:projects_udemy1/widgets/app_drawer.dart';
 import 'package:projects_udemy1/widgets/badge.dart';
 import 'package:provider/provider.dart';
 import '/widgets/product_grid.dart';
@@ -45,10 +46,13 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
             builder: (_, cart, ch) =>
                 Badges(child: ch!, value: cart.itemCount.toString()),
             child:
-                IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
+                IconButton(onPressed: () {
+                  Navigator.pushNamed(context, CartScreen.routeName);
+                }, icon: Icon(Icons.shopping_cart)),
           )
         ],
       ),
+      drawer: AppDrawer(),
       body: ProductGrid(showFavs: _showOnlyFavorites),
     );
   }
