@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projects_udemy1/providers/cart.dart';
 import 'package:projects_udemy1/providers/orders.dart';
-import 'package:projects_udemy1/widgets/app_drawer.dart';
 import 'package:projects_udemy1/widgets/cart_item.dart';
 import 'package:provider/provider.dart';
 
